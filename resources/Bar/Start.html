@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Booking Customers Barcode</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/Bar/css/bootstrap.min.css">
+    <!-- 
+	<script type="text/javascript" src="/js/bwip-js-min.js"></script>
+ -->
+    <!-- <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css"> -->
+    <!-- <link rel="stylesheet" href="/css/print.min.css"> -->
+
+    <link rel="stylesheet" href="/Bar/css/header.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eleventh navbar example">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-3" href="#">KeshavSoft</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExample09">
+                        <div class="container">
+                            <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <a href="/"
+                                    class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-1">
+
+                                </a>
+
+                                <ul id="KSHtmlUl"
+                                    class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                                    <li>
+                                        <a tabindex="-1" href="#" class="nav-link text-danger"
+                                            onclick="jFCommonFuncsClass.JsFuncs.NeutralinoFuncs.QuitFunc()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-power d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M7.5 1v7h1V1h-1z" />
+                                                <path
+                                                    d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                                            </svg>
+                                            Quit
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"></path>
+                                                <path
+                                                    d="M3.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm9-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM16 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-9 9a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm5.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm-9-11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                            </svg>
+                                            Products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Members.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            Members
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Transactions.Sales.ShowAll(event)"
+                                            class="nav-link text-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"></path>
+                                                <path
+                                                    d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z">
+                                                </path>
+
+                                            </svg>
+                                            Bills
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Transactions.Inwards.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-layer-backward d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.354 15.854a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708l1-1a.5.5 0 0 1 .708 0l.646.647V4H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9v7.793l.646-.647a.5.5 0 0 1 .708 0l1 1a.5.5 0 0 1 0 .708l-3 3z" />
+                                                <path
+                                                    d="M1 9a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4.5a.5.5 0 0 1 0 1H1v2h4.5a.5.5 0 0 1 0 1H1zm9.5 0a.5.5 0 0 1 0-1H15V6h-4.5a.5.5 0 0 1 0-1H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4.5z" />
+                                            </svg>
+                                            Inwards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Stock.PeriodWithPresentDate(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M4 0h8a2 2 0 0 1 2 2v7H2V2a2 2 0 0 1 2-2zM2 12h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2zM.5 10a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5z" />
+                                            </svg>
+                                            Reports
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Daily.ShowDates(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                                                <path
+                                                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                                            </svg>
+                                            Daily
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.BackUp.StartFunc()"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-usb-drive d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4H6v-4ZM7 1v1h1V1H7Zm2 0v1h1V1H9ZM6 5a1 1 0 0 0-1 1v8.5A1.5 1.5 0 0 0 6.5 16h4a1.5 1.5 0 0 0 1.5-1.5V6a1 1 0 0 0-1-1H6Zm0 1h5v8.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V6Z" />
+                                            </svg>
+                                            Backup
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Monthly.ShowDatesForFilters(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                                                <path
+                                                    d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+                                            </svg>
+                                            Monthly
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Admin.Password.ShowFunc(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-key d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>
+                                            Password
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="KCont1">
+
+        </div>
+    </main>
+    <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enter client user credentials</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="LoginFormPopUpId" class="" onsubmit="return false" novalidate>
+                        <div class="mb-3 form-floating is-valid" id="UserNameRow">
+                            <input type="text" class="form-control" id="KUserNameInput" required>
+                            <label for="KUserNameInput">User Name</label>
+                            <div class="invalid-feedback">
+                                User Name cannot be empty.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input type="password" class="form-control" id="KPasswordInput" required>
+                            <label for="KPasswordInput">Password</label>
+                            <div class="invalid-feedback">
+                                Password cannot be empty.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <input type="submit" id="LoginModalSubmit" class=" btn btn-primary"
+                            onclick="jFCommonFuncsClass.JsFuncs.Admin.Bs5.LoginFuncs.SubmitButton.ClickFunc(event)">
+                        <!-- <button type="button" class="btn btn-primary"
+                        onclick="jVarGlobalAdmin.Login.LoginCheck()">Check</button>
+                         -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top d-print-none">
+            <div class="col-md-6 d-flex align-items-center">
+                <span class="text-muted">KeshavSoft v3.22</span>
+            </div>
+
+            <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
+                <a target="_blank" id="DataPathId" href="http://keshavsoft.com/">Data path : </a>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="/Bar/js/bootstrap.min.js"></script>
+    <script src="/Bar/js/BillPrint.js"></script>
+
+    <script src="/Bar/Bills/Js/Start.js" type="module"></script>
+
+    <script src="/js/neutralino.js"></script>
+    <script src="/Bar/js/sweetalert2@11.js"></script>
+
+    <script src="/Bar/js/handlebars.min-v4.7.7.js"></script>
+
+    <script>
+
+        Handlebars.registerHelper('ForSNo', function (item) {
+            return item + 1;
+        });
+
+        Handlebars.registerHelper('ForAmount', function (inQty, inPrice) {
+            return parseFloat(inQty) * parseFloat(inPrice);
+        });
+        Handlebars.registerHelper('ShowInIndianDateFormat', function (value, options) {
+            //return this.JsFuncs.GeneralFuncs.addThousand(parseFloat(value).toFixed(2), 2);
+            let decimalpoints = 2;
+            var input = value;
+            var output = value;
+            var zerovalue = "0";
+
+            if (parseFloat(input)) {
+                input = new String(input); // so you can perform string operations
+
+                if (input.indexOf(".") === -1) {
+                    //if no decimal is present in input
+
+                    output = IndianFormat(input.trim());
+
+                    if (decimalpoints > 0) {
+                        //if decimalpoints are needed then add that many zeros with . to the output
+                        output += "." + zerovalue.repeat(decimalpoints);
+                    }
+                }
+                else {
+                    var parts = input.split("."); // remove the decimal part
+                    //convert the integer to thousands value
+                    parts[0] = IndianFormat(parts[0]);
+                    //now check for the decimal portion length
+                    if (parts[1].trim().length < decimalpoints) {
+                        //if decimal portion length is less then needed of decimalpoints
+                        //then insert the last need zeros as below
+                        parts[1] = parts[1].trim() + zerovalue.repeat(decimalpoints - parts[1].trim().length);
+                    }
+                    else {
+                        //if decimal portion needed is less then available
+                        //then trim the content needed
+                        parts[1] = parts[1].substring(0, decimalpoints);
+                    }
+                    //now join then split parts
+                    output = parts.join(".");
+                }
+
+            }
+            return output;
+        });
+
+        let jFSearchInputKeyPress = (event) => {
+            if (event.key === 'Enter') { // key code of the keybord key
+                event.preventDefault();
+                let jVarLocalCurrentTarget = event.currentTarget;
+                let jVarLocalClosestCard = jVarLocalCurrentTarget.closest(".card");
+                let jVarLocalTable = jVarLocalClosestCard.querySelector("table");
+
+                // your code to Run
+                LocalSearchTable({ inTable: jVarLocalTable });
+            };
+        };
+
+        let myFunction = () => {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("SearchQrCodeTable");
+            filter = input.value;
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            console.log("1111111111 : ", input, filter);
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    console.log("222222 : ", td.innerHTML);
+
+                    if (td.innerHTML.indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        };
+
+        function LocalSearchTable({ inTable }) {
+            // Declare variables 
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("SearchQrCodeTable");
+            filter = input.value.toUpperCase();
+            //table = document.getElementById("myTable");
+
+            table = inTable;
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    let tdata = td[j];
+                    if (tdata) {
+                        if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        };
+
+        Neutralino.init();
+    </script>
+
+</body>
+
+</html>
