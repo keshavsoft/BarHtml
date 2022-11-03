@@ -3,6 +3,7 @@ import { ShowFunc } from "../../Dal/Items/Show.js";
 import { StartFunc as AddListenersStartFunc } from "./AddListeners.js";
 
 let StartFunc = async () => {
+ 
     let jVarLocalDataFromServer = await ShowFunc();
     let jVarLocalRawTemplate = await FromHbsStartFunc();
     //let jVarLocalDataFromServer = {};

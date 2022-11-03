@@ -47,7 +47,8 @@
       "exitProcessOnClose": false,
       "nativeAllowList": [
         "filesystem.*",
-        "os.execCommand"
+        "os.execCommand",
+        "app.*"
       ]
     },
     "browser": {
