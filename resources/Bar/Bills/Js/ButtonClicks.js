@@ -1,5 +1,6 @@
 import { Update as DalUpdate } from "../../Dal/Sales/Update.js";
 import { StartFunc as FirstRowStartFunc } from "./FirstRow.js";
+import { PrintOriginalBillWithDuplicate } from "../../js/BillPrintModules.js";
 
 let CreateNew = async (event) => {
     let jVarLocalCurrentTarget = event.currentTarget;
@@ -29,8 +30,10 @@ let CreateNew = async (event) => {
                     });
 
                     if (jVarLocalFromMember.success) {
-                        BillPrintCommonFuncs.PrintOriginalBillWithDuplicate(jVarLocalHeadPK);
-                        console.log("bbbbbbbbbbb");
+                        console.log("bbbbbbbbbbb", jVarLocalHeadPK);
+
+                        PrintOriginalBillWithDuplicate(jVarLocalHeadPK);
+
                         FirstRowStartFunc();
                         //   jFCommonFuncsClass.JsFuncs.Transactions.Sales.FirstRow();
                     };
