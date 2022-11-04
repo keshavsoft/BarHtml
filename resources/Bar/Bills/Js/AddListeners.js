@@ -3,7 +3,6 @@ import { CreateNew } from "./ButtonClicks.js";
 
 let StartFunc = () => {
     let jVarLocalQuitId = document.getElementById("QuitId");
-
     let jVarLocalCustomersSaveButtonId = document.getElementsByClassName("buttoninsertclass");
 
     jVarLocalQuitId.addEventListener('click', async () => {
