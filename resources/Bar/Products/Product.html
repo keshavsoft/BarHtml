@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Booking Customers Barcode</title>
+    <title>Bar Products</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,7 +57,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a tabindex="-1" href="./Products/Product.html"
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.ShowAll(event)"
                                             class="nav-link text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 fill="currentColor" class="bi home d-block mx-auto mb-1"
@@ -70,7 +71,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a tabindex="-1" href="#"
+                                        <a tabindex="-1" href="../Start.html"
                                             onclick="jFCommonFuncsClass.JsFuncs.Transactions.Sales.ShowAll(event)"
                                             class="nav-link text-info">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -152,182 +153,10 @@
 
         </div>
     </main>
-    <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Enter client user credentials</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="LoginFormPopUpId" class="" onsubmit="return false" novalidate>
-                        <div class="mb-3 form-floating is-valid" id="UserNameRow">
-                            <input type="text" class="form-control" id="KUserNameInput" required>
-                            <label for="KUserNameInput">User Name</label>
-                            <div class="invalid-feedback">
-                                User Name cannot be empty.
-                            </div>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mb-3 form-floating">
-                            <input type="password" class="form-control" id="KPasswordInput" required>
-                            <label for="KPasswordInput">Password</label>
-                            <div class="invalid-feedback">
-                                Password cannot be empty.
-                            </div>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <input type="submit" id="LoginModalSubmit" class=" btn btn-primary"
-                            onclick="jFCommonFuncsClass.JsFuncs.Admin.Bs5.LoginFuncs.SubmitButton.ClickFunc(event)">
-                        <!-- <button type="button" class="btn btn-primary"
-                        onclick="jVarGlobalAdmin.Login.LoginCheck()">Check</button>
-                         -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top d-print-none">
-            <div class="col-md-6 d-flex align-items-center">
-                <span class="text-muted">KeshavSoft v3.22</span>
-            </div>
-
-            <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
-                <a target="_blank" id="DataPathId" href="http://keshavsoft.com/">Data path : </a>
-            </ul>
-        </footer>
-    </div>
-
-    <script src="/Bar/js/bootstrap.min.js"></script>
-    <script src="/Bar/js/BillPrint.js"></script>
-
-    <script src="/Bar/Start.js" type="module"></script>
-
-    <script src="/js/neutralino.js"></script>
-    <script src="/Bar/js/sweetalert2@11.js"></script>
-
+    <script src="./Product.js" type="module"></script>
     <script src="/Bar/js/handlebars.min-v4.7.7.js"></script>
 
-    <script>
 
-        Handlebars.registerHelper('ForSNo', function (item) {
-            return item + 1;
-        });
-
-        Handlebars.registerHelper('ForAmount', function (inQty, inPrice) {
-            return parseFloat(inQty) * parseFloat(inPrice);
-        });
-        Handlebars.registerHelper('ShowInIndianDateFormat', function (value, options) {
-            //return this.JsFuncs.GeneralFuncs.addThousand(parseFloat(value).toFixed(2), 2);
-            let decimalpoints = 2;
-            var input = value;
-            var output = value;
-            var zerovalue = "0";
-
-            if (parseFloat(input)) {
-                input = new String(input); // so you can perform string operations
-
-                if (input.indexOf(".") === -1) {
-                    //if no decimal is present in input
-
-                    output = IndianFormat(input.trim());
-
-                    if (decimalpoints > 0) {
-                        //if decimalpoints are needed then add that many zeros with . to the output
-                        output += "." + zerovalue.repeat(decimalpoints);
-                    }
-                }
-                else {
-                    var parts = input.split("."); // remove the decimal part
-                    //convert the integer to thousands value
-                    parts[0] = IndianFormat(parts[0]);
-                    //now check for the decimal portion length
-                    if (parts[1].trim().length < decimalpoints) {
-                        //if decimal portion length is less then needed of decimalpoints
-                        //then insert the last need zeros as below
-                        parts[1] = parts[1].trim() + zerovalue.repeat(decimalpoints - parts[1].trim().length);
-                    }
-                    else {
-                        //if decimal portion needed is less then available
-                        //then trim the content needed
-                        parts[1] = parts[1].substring(0, decimalpoints);
-                    }
-                    //now join then split parts
-                    output = parts.join(".");
-                }
-
-            }
-            return output;
-        });
-
-        let jFSearchInputKeyPress = (event) => {
-            if (event.key === 'Enter') { // key code of the keybord key
-                event.preventDefault();
-                let jVarLocalCurrentTarget = event.currentTarget;
-                let jVarLocalClosestCard = jVarLocalCurrentTarget.closest(".card");
-                let jVarLocalTable = jVarLocalClosestCard.querySelector("table");
-
-                // your code to Run
-                LocalSearchTable({ inTable: jVarLocalTable });
-            };
-        };
-
-        let myFunction = () => {
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("SearchQrCodeTable");
-            filter = input.value;
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            console.log("1111111111 : ", input, filter);
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    console.log("222222 : ", td.innerHTML);
-
-                    if (td.innerHTML.indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        };
-
-        function LocalSearchTable({ inTable }) {
-            // Declare variables 
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("SearchQrCodeTable");
-            filter = input.value.toUpperCase();
-            //table = document.getElementById("myTable");
-
-            table = inTable;
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td");
-                for (j = 0; j < td.length; j++) {
-                    let tdata = td[j];
-                    if (tdata) {
-                        if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                            break;
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-            }
-        };
-
-        Neutralino.init();
-    </script>
 
 </body>
 
